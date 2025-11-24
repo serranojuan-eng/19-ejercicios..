@@ -1,16 +1,13 @@
 # Ejercicio 3.5
 # Determinar si un número es par o impar.
 
-def main():
-    try:
-        n = int(input("Ingrese un número entero: ").strip())
-    except ValueError:
-        print("Entrada inválida. Use un número entero.")
-        return
-    if n % 2 == 0:
-        print(n, "es par")
-    else:
-        print(n, "es impar")
+try:
+    n = int(input("Ingrese un número entero: ").strip())
+except ValueError:
+    print("Entrada inválida. Use un número entero.")
+    exit()
 
-if __name__ == '__main__':
-    main()
+if n % 2 == 0:
+    print(n, "es par")
+else:
+    print(n, "es impar")
